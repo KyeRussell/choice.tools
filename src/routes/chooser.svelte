@@ -6,8 +6,8 @@
 	export let onChoose: (name: string) => void;
 </script>
 
-<div class="flex h-full flex-col items-center justify-center gap-4 md:flex-row">
+<div class="flex h-full flex-col items-center justify-center gap-4">
 	<Choice name={first} {onChoose} />
-	<span class="hidden text-6xl md:visible">vs.</span>
+	<div class="text-2xl md:text-6xl">vs.</div>
 	<Choice name={second} {onChoose} />
 </div>
