@@ -5,7 +5,7 @@
 </script>
 
 <div class="grid h-full grid-rows-[auto,1fr,auto] gap-2 md:gap-4">
-	<p class="text-center text-2xl md:mb-4 md:text-4xl">Results:</p>
+	<p class="text-center text-2xl md:text-4xl">Results:</p>
 
 	<div>
 		<div class="flex flex-col rounded border-4 border-neutral-700">
