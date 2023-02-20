@@ -3,6 +3,11 @@
 	import '@fortawesome/fontawesome-free/css/all.css';
 </script>
 
+<!-- set the title -->
+<svelte:head>
+	<title>choice.tools</title>
+</svelte:head>
+
 <div
 	class="grid h-full grid-rows-[auto,1fr,auto] divide-y-4 divide-neutral-700 font-serif text-neutral-700"
 >
