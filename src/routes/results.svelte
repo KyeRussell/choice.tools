@@ -5,7 +5,7 @@
 </script>
 
 <div class="grid h-full grid-rows-[auto,1fr,auto] gap-2 md:gap-4">
-	<p class="text-center text-2xl md:text-4xl">Results:</p>
+	<p class="text-center text-2xl">Results:</p>
 
 	<div>
 		<div class="flex flex-col rounded border-4 border-neutral-700">
@@ -23,7 +23,7 @@
 
 	<div class="w-full">
 		<button
-			class="flex h-14 w-full items-center justify-center rounded border-4 border-neutral-700 bg-amber-200 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400 md:h-20 md:text-3xl"
+			class="flex w-full items-center justify-center rounded border-4 border-neutral-700 bg-amber-200 p-2 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400 md:p-3"
 			on:click={onReset}>Start again</button
 		>
 	</div>

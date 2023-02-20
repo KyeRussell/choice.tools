@@ -26,7 +26,7 @@
 	on:submit|preventDefault={onSubmit}
 >
 	<input
-		class="m-0 h-14 w-full border-0 bg-inherit p-0 text-2xl focus:ring-0 md:text-3xl"
+		class="m-0 h-14 w-full border-0 bg-inherit p-0 text-2xl focus:ring-0"
 		type="text"
 		bind:value={currentChoice}
 		placeholder={!othersInList ? 'Type here...' : 'And another...'}
@@ -35,7 +35,7 @@
 	<button
 		type="submit"
 		disabled={!canAdd}
-		class="flex flex-shrink-0 items-center justify-center rounded-lg border-4 border-neutral-700 bg-amber-200 p-4 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400 md:text-3xl"
+		class="flex flex-shrink-0 items-center justify-center rounded-lg border-4 border-neutral-700 bg-amber-200 p-4 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400"
 	>
 		<i class="fas fa-plus" />
 	</button>

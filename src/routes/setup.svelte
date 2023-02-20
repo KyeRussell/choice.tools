@@ -16,7 +16,7 @@
 </script>
 
 <div class="grid h-full grid-rows-[auto,1fr,auto] gap-2 rounded md:gap-4">
-	<p class="text-center text-2xl md:text-4xl">Add your choices to the list.</p>
+	<p class="text-center text-2xl">Add your choices to the list.</p>
 	<div class="flex flex-col rounded border-4 border-neutral-700">
 		<!-- Existing choices -->
 		<ul
@@ -25,10 +25,10 @@
 		>
 			{#each choices as choice}
 				<li class="flex w-full items-center justify-between bg-neutral-100 p-4 align-middle">
-					<span class="text-2xl md:text-3xl">{choice}</span>
+					<span class="text-2xl">{choice}</span>
 					<button
 						type="submit"
-						class="flex items-center justify-center rounded-lg border-4 border-neutral-700 bg-amber-200 p-4 align-middle text-xl disabled:bg-gray-200 md:text-3xl"
+						class="flex items-center justify-center rounded-lg border-4 border-neutral-700 bg-amber-200 p-4 align-middle text-xl disabled:bg-gray-200"
 						on:click={() => onRemoveChoice(choice)}
 					>
 						<i class="fa-regular fa-trash-can" />
@@ -43,7 +43,7 @@
 	<!-- Finished! -->
 	<div class="w-full">
 		<button
-			class="flex w-full items-center justify-center rounded border-4 border-neutral-700 bg-amber-200 p-2 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400 md:p-3 md:text-3xl"
+			class="flex w-full items-center justify-center rounded border-4 border-neutral-700 bg-amber-200 p-2 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400 md:p-3"
 			disabled={choices.length < 3}
 			on:click={onFinished}>I've finished adding choices</button
 		>
