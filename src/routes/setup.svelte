@@ -28,7 +28,7 @@
 					<span class="text-2xl md:text-3xl">{choice}</span>
 					<button
 						type="submit"
-						class="flex h-14 w-14 items-center justify-center rounded-lg border-4 border-neutral-700 bg-amber-200 align-middle text-xl disabled:bg-gray-200 md:h-16 md:w-16 md:text-3xl"
+						class="flex items-center justify-center rounded-lg border-4 border-neutral-700 bg-amber-200 p-4 align-middle text-xl disabled:bg-gray-200 md:text-3xl"
 						on:click={() => onRemoveChoice(choice)}
 					>
 						<i class="fa-regular fa-trash-can" />
@@ -43,7 +43,7 @@
 	<!-- Finished! -->
 	<div class="w-full">
 		<button
-			class="flex h-14 w-full items-center justify-center rounded border-4 border-neutral-700 bg-amber-200 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400 md:h-20 md:text-3xl"
+			class="flex w-full items-center justify-center rounded border-4 border-neutral-700 bg-amber-200 p-2 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400 md:p-3 md:text-3xl"
 			disabled={choices.length < 3}
 			on:click={onFinished}>I've finished adding choices</button
 		>

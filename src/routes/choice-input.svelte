@@ -35,7 +35,7 @@
 	<button
 		type="submit"
 		disabled={!canAdd}
-		class="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded border-4 border-neutral-700 bg-amber-200 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400 md:h-16 md:w-16 md:text-3xl"
+		class="flex flex-shrink-0 items-center justify-center rounded-lg border-4 border-neutral-700 bg-amber-200 p-4 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400 md:text-3xl"
 	>
 		<i class="fas fa-plus" />
 	</button>

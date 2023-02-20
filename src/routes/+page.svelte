@@ -18,7 +18,7 @@
 
 <!-- Display the right component based on the state -->
 <div class="flex h-full w-full justify-center">
-	<div class="h-full w-full md:max-w-2xl">
+	<div class="h-full w-full md:max-w-xl">
 		{#if state === 'setup'}
 			<Setup bind:choices onFinished={() => (state = 'chooser')} />
 		{:else if state === 'chooser'}
