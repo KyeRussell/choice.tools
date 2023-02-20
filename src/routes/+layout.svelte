@@ -17,6 +17,8 @@
 	<footer
 		class="flex items-center justify-center bg-amber-50 p-2 text-center align-middle text-lg text-neutral-500 md:p-4 md:text-2xl md:text-inherit"
 	>
-		Made by Kye Russell
+		Made by&nbsp;<a class="text-amber-400 hover:text-amber-500" href="http://github.com/kyerussell"
+			>Kye</a
+		>
 	</footer>
 </div>

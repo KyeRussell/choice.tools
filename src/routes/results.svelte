@@ -23,7 +23,7 @@
 
 	<div class="w-full">
 		<button
-			class="flex h-14 w-full items-center justify-center border-4 border-neutral-700 bg-amber-200 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400 md:h-20 md:text-3xl"
+			class="flex h-14 w-full items-center justify-center rounded border-4 border-neutral-700 bg-amber-200 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400 md:h-20 md:text-3xl"
 			on:click={onReset}>Start again</button
 		>
 	</div>
