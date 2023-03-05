@@ -9,9 +9,6 @@
 	let currentChoice: string = '';
 
 	function onSubmit(event: SubmitEvent) {
-		if (!canAdd) {
-			return;
-		}
 		onAddChoice(currentChoice);
 		currentChoice = '';
 	}
@@ -38,7 +35,5 @@
 		placeholder={!othersInList ? 'Type here...' : 'And another...'}
 		bind:this={input}
 	/>
-	<Button type="submit" disabled={!canAdd} invalid={!isValid}>
-		<i class="fas fa-plus" />
-	</Button>
+	<Button type="submit" icon="fas fa-plus" disabled={!canAdd} invalid={!isValid} />
 </form>

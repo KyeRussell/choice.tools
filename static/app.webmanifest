@@ -1,0 +1,16 @@
+{
+	"$schema": "https://json.schemastore.org/web-manifest-combined.json",
+	"name": "choice.tools",
+	"short_name": "choice.tools",
+	"description": "A collection of tools for making choices.",
+	"background_color": "#fffbeb",
+	"display": "standalone",
+	"orientation": "portrait",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "/icon.svg",
+			"sizes": "any"
+		}
+	]
+}

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ChoiceInput from './choice-input.svelte';
 	import autoAnimate from '@formkit/auto-animate';
+	import Button from '$lib/components/Button.svelte';
 
 	export let choices: string[];
 	export let onFinished: () => void;
@@ -16,7 +17,7 @@
 </script>
 
 <div class="grid h-full grid-rows-[auto,1fr,auto] gap-2 rounded md:gap-4">
-	<p class="text-center text-2xl">Add your choices to the list.</p>
+	<p class="p-2 text-center text-3xl">Add your choices below</p>
 	<div class="flex flex-col rounded border-4 border-neutral-700">
 		<!-- Existing choices -->
 		<ul
@@ -26,13 +27,11 @@
 			{#each choices as choice}
 				<li class="flex w-full items-center justify-between bg-neutral-100 p-4 align-middle">
 					<span class="text-2xl">{choice}</span>
-					<button
+					<Button
 						type="submit"
-						class="flex items-center justify-center rounded-lg border-4 border-neutral-700 bg-amber-200 p-4 align-middle text-xl disabled:bg-gray-200"
 						on:click={() => onRemoveChoice(choice)}
-					>
-						<i class="fa-regular fa-trash-can" />
-					</button>
+						icon="fa-regular fa-trash-can"
+					/>
 				</li>
 			{/each}
 			<!-- Input for new choice -->
@@ -41,11 +40,7 @@
 	</div>
 
 	<!-- Finished! -->
-	<div class="w-full">
-		<button
-			class="flex w-full items-center justify-center rounded border-4 border-neutral-700 bg-amber-200 p-2 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400 md:p-3"
-			disabled={choices.length < 3}
-			on:click={onFinished}>I've finished adding choices</button
-		>
-	</div>
+	<Button on:click={onFinished} disabled={choices.length < 3} fullWidth
+		>I've finished adding choices
+	</Button>
 </div>
