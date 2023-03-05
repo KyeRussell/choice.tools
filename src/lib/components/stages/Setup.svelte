@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ChoiceInput from './choice-input.svelte';
+	import ChoiceInput from '$lib/components/ChoiceInput.svelte';
 	import autoAnimate from '@formkit/auto-animate';
 	import Button from '$lib/components/Button.svelte';
 

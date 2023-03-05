@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Choice from './choice.svelte';
+	import Choice from '$lib/components/Choice.svelte';
 
 	export let first: string;
 	export let second: string;

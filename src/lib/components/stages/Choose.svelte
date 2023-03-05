@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Chooser from './chooser.svelte';
+	import Chooser from '$lib/components/Chooser.svelte';
 	import generatePairs from '$lib/generatePairs';
 
 	export let choices: string[];
