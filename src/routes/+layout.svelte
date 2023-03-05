@@ -9,10 +9,10 @@
 </svelte:head>
 
 <div
-	class="grid h-full grid-rows-[auto,1fr] divide-y-4 divide-neutral-700 font-serif text-neutral-700"
+	class="grid h-full grid-rows-[auto,1fr] divide-y-4 divide-neutral-700 font-['Roboto_Slab'] text-neutral-700"
 >
 	<header class="bg-amber-50 px-4 py-2 text-center md:py-4 md:px-20">
-		<h1 class="flex-grow font-['Roboto_Slab'] text-5xl font-bold">
+		<h1 class="flex-grow text-5xl font-bold">
 			choice<span class="text-amber-400">.</span>tools
 		</h1>
 	</header>

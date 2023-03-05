@@ -17,7 +17,7 @@
 </script>
 
 <div class="grid h-full grid-rows-[auto,1fr,auto] gap-2 rounded md:gap-4">
-	<p class="p-2 text-center text-3xl">Add your choices below</p>
+	<p class="p-2 text-center text-3xl">Add your choices</p>
 	<div class="flex flex-col rounded border-4 border-neutral-700">
 		<!-- Existing choices -->
 		<ul
