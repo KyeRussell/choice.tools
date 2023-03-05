@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import ListItem from './ListItem.svelte';
 	import Button from '$lib/components/Button.svelte';
 	export let onAddChoice: (choice: string) => void;
 	export let focus: boolean = true;
@@ -24,16 +25,15 @@
 	});
 </script>
 
-<form
-	class="flex w-full items-center justify-between gap-4 bg-neutral-50 p-4 align-middle"
-	on:submit|preventDefault={onSubmit}
->
-	<input
-		class="m-0 h-14 w-full border-0 bg-inherit p-0 text-2xl focus:ring-0"
-		type="text"
-		bind:value={currentChoice}
-		placeholder={!othersInList ? 'Type here...' : 'And another...'}
-		bind:this={input}
-	/>
-	<Button type="submit" icon="fas fa-plus" disabled={!canAdd} invalid={!isValid} />
-</form>
+<ListItem>
+	<form on:submit|preventDefault={onSubmit} class="flex w-full items-center gap-2">
+		<input
+			class="m-0 h-14 w-full border-0 bg-inherit p-0 text-2xl focus:ring-0"
+			type="text"
+			bind:value={currentChoice}
+			placeholder={!othersInList ? 'Type here...' : 'And another...'}
+			bind:this={input}
+		/>
+		<Button type="submit" icon="fas fa-plus" disabled={!canAdd} invalid={!isValid} />
+	</form>
+</ListItem>

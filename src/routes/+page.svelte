@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Setup from '$lib/components/stages/Setup.svelte';
-	import Results from '$lib/components/stages/Results.svelte';
-	import ChooseStage from '$lib/components/stages/Choose.svelte';
+	import Setup from './stages/Setup.svelte';
+	import Results from './stages/Results.svelte';
+	import ChooseStage from './stages/Choose.svelte';
 
 	let choices: string[] = [];
 
