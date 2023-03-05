@@ -15,7 +15,6 @@
 	}
 
 	$: isValid = !choices.includes(currentChoice);
-	$: canAdd = isValid && currentChoice.length > 0;
 	$: othersInList = choices.length > 0;
 
 	onMount(() => {
@@ -33,7 +32,8 @@
 			bind:value={currentChoice}
 			placeholder={!othersInList ? 'Type here...' : 'And another...'}
 			bind:this={input}
+			data-new-choice-input
 		/>
-		<Button type="submit" icon="fas fa-plus" disabled={!canAdd} invalid={!isValid} />
+		<Button type="submit" icon="fas fa-plus" disabled={!isValid} data-new-choice-submit />
 	</form>
 </ListItem>
