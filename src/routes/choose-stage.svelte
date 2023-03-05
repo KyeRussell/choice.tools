@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Chooser from './chooser.svelte';
+	import generatePairs from '$lib/generatePairs';
 
 	export let choices: string[];
 	export let votes: Record<string, number> = {};
@@ -11,26 +12,23 @@
 		})
 	);
 
-	// Generate an array of every permutation of two items in the list
-	const permutations = choices.flatMap((value, index) => {
-		return choices.slice(index + 1).map((other) => [value, other]);
-	});
+	// Generate an array of every pair permutation of two items in the list
+	const pairs = generatePairs(choices);
 
 	let first: string;
 	let second: string;
 
-	let currentPermutation = 0;
+	let currentPair = 0;
 
 	$: {
-		console.log(permutations);
-		[first, second] = permutations[currentPermutation];
-		console.log('Selected permutation:', first, second);
+		[first, second] = pairs[currentPair];
+		console.log('Selected pair:', first, second);
 	}
 
 	function onChoose(name: string) {
 		votes[name]++;
-		if (currentPermutation < permutations.length - 1) {
-			currentPermutation++;
+		if (currentPair < pairs.length - 1) {
+			currentPair++;
 		} else {
 			onFinished();
 		}

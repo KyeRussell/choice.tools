@@ -1,18 +1,24 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import Button from '$lib/components/Button.svelte';
 	export let onAddChoice: (choice: string) => void;
 	export let focus: boolean = true;
-	export let othersInList: boolean = false;
+	export let choices: string[] = [];
 	let input: HTMLInputElement | null = null;
 
 	let currentChoice: string = '';
 
 	function onSubmit(event: SubmitEvent) {
+		if (!canAdd) {
+			return;
+		}
 		onAddChoice(currentChoice);
 		currentChoice = '';
 	}
 
-	$: canAdd = currentChoice.length > 0;
+	$: isValid = !choices.includes(currentChoice);
+	$: canAdd = isValid && currentChoice.length > 0;
+	$: othersInList = choices.length > 0;
 
 	onMount(() => {
 		if (focus && input) {
@@ -32,11 +38,7 @@
 		placeholder={!othersInList ? 'Type here...' : 'And another...'}
 		bind:this={input}
 	/>
-	<button
-		type="submit"
-		disabled={!canAdd}
-		class="flex flex-shrink-0 items-center justify-center rounded-lg border-4 border-neutral-700 bg-amber-200 p-4 align-middle text-xl disabled:border-neutral-400 disabled:bg-neutral-200 disabled:text-neutral-400"
-	>
+	<Button type="submit" disabled={!canAdd} invalid={!isValid}>
 		<i class="fas fa-plus" />
-	</button>
+	</Button>
 </form>

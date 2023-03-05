@@ -36,7 +36,7 @@
 				</li>
 			{/each}
 			<!-- Input for new choice -->
-			<ChoiceInput {onAddChoice} othersInList={choices.length > 0} />
+			<ChoiceInput {onAddChoice} {choices} />
 		</ul>
 	</div>
 
