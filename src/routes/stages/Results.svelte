@@ -8,10 +8,10 @@
 	$: sortedState = Object.entries(votes).sort((a, b) => b[1] - a[1]);
 </script>
 
-<div class="grid h-full grid-rows-[auto,1fr,auto] gap-2 md:gap-4">
-	<IntroText>Results:</IntroText>
+<div class="grid h-full grid-rows-[auto,1fr,auto] gap-4 rounded-lg md:shadow-none">
+	<IntroText>Results</IntroText>
 
-	<List>
+	<List ordered>
 		{#each sortedState as [name, count], index}
 			<ListItem>
 				<span class="text-2xl">{index + 1}: {name}</span>

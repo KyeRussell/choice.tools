@@ -4,4 +4,4 @@
 	export let onChoose: (name: string) => void;
 </script>
 
-<Button on:click={() => onChoose(name)} class="w-full">{name}</Button>
+<Button on:click={() => onChoose(name)} class="w-full text-4xl {$$restProps.class}">{name}</Button>

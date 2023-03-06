@@ -8,7 +8,7 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: colors.amber['200'],
-				accent: colors.amber['50']
+				accent: colors.amber['100']
 			}
 		}
 	},

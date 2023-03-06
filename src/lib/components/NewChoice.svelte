@@ -10,11 +10,12 @@
 	let currentChoice: string = '';
 
 	function onSubmit(event: SubmitEvent) {
-		onAddChoice(currentChoice);
+		onAddChoice(processedChoice);
 		currentChoice = '';
 	}
 
-	$: isValid = !choices.includes(currentChoice);
+	$: processedChoice = currentChoice.trim();
+	$: isValid = !choices.includes(processedChoice) && processedChoice.length > 0;
 	$: othersInList = choices.length > 0;
 
 	onMount(() => {
@@ -24,7 +25,7 @@
 	});
 </script>
 
-<ListItem>
+<ListItem highlightOnFocus>
 	<form on:submit|preventDefault={onSubmit} class="flex w-full items-center gap-2">
 		<input
 			class="m-0 h-14 w-full border-0 bg-inherit p-0 text-2xl focus:ring-0 dark:placeholder:text-neutral-500"

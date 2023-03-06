@@ -22,8 +22,11 @@
 	$: canFinish = hasEnoughChoices;
 </script>
 
-<div class="grid h-full grid-rows-[auto,1fr,auto] gap-2 rounded md:gap-4">
+<div
+	class="between grid h-full grid-rows-[auto,1fr,auto,auto] content-between rounded-lg md:shadow-none"
+>
 	<IntroText>Add your choices</IntroText>
+
 	<List>
 		{#each choices as choice}
 			<ListItem>
@@ -41,7 +44,12 @@
 		<NewChoice {onAddChoice} {choices} />
 	</List>
 
-	<!-- Finished! -->
-	<Button on:click={onFinished} disabled={!canFinish} fullWidth>I've finished adding choices</Button
-	>
+	<div class="mt-2">
+		<p class="text-center leading-none text-neutral-500 md:hidden" class:hidden={hasEnoughChoices}>
+			You need at least 3 choices to start
+		</p>
+		<Button on:click={onFinished} disabled={!canFinish} class="mt-2 w-full first:pt-4">
+			I've finished adding choices
+		</Button>
+	</div>
 </div>
