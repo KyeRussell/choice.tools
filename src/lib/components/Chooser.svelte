@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Choice from '$lib/components/Choice.svelte';
-	import autoAnimate from '@formkit/auto-animate';
 
 	export let first: string;
 	export let second: string;
