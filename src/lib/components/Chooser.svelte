@@ -6,9 +6,7 @@
   export let onChoose: (name: string) => void;
 </script>
 
-<div
-  class="grid h-full w-full grid-rows-[1fr,auto,1fr] gap-4 text-center md:flex md:flex-col md:justify-center"
->
+<div class="flex h-full w-full flex-col justify-center gap-4 text-center">
   {#key [first, second]}
     <Choice name={first} {onChoose} />
     <div class="text-2xl">vs.</div>

@@ -46,10 +46,14 @@
 
   <div class="mt-2">
     <p
-      class="text-center leading-none text-neutral-500 md:hidden"
+      class="text-center leading-none text-neutral-500 dark:text-gray-200"
       class:hidden={hasEnoughChoices}
     >
-      You need at least 3 choices to start
+      {#if choices.length === 0}
+        You need at least 3 choices.
+      {:else}
+        You need {3 - choices.length} more choice{#if 3 - choices.length > 1}s{/if}.
+      {/if}
     </p>
     <Button
       on:click={onFinished}

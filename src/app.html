@@ -2,7 +2,9 @@
 <html lang="en" class="h-full">
   <head>
     <meta charset="utf-8" />
-    <meta name="theme-color" content="rgb(253,230,138)" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="rgb(253,230,138)" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17202e" />
+
     <link rel="manifest" href="%sveltekit.assets%/app.webmanifest" />
     <link rel="icon" href="%sveltekit.assets%/icon.png" />
     <link rel="apple-touch-icon" href="%sveltekit.assets%/icon.png" />
@@ -20,7 +22,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     %sveltekit.head%
   </head>
-  <body data-sveltekit-preload-data="hover" class="h-full bg-amber-100">
+  <body data-sveltekit-preload-data="hover" class="h-full dark:bg-gray-800 bg-amber-100">
     <div class="h-full">%sveltekit.body%</div>
   </body>
 </html>
