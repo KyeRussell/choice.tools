@@ -10,8 +10,10 @@
 	let currentChoice: string = '';
 
 	function onSubmit(event: SubmitEvent) {
-		onAddChoice(processedChoice);
-		currentChoice = '';
+		if (isValid) {
+			onAddChoice(processedChoice);
+			currentChoice = '';
+		}
 	}
 
 	$: processedChoice = currentChoice.trim();
