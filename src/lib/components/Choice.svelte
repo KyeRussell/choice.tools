@@ -1,7 +1,10 @@
 <script lang="ts">
-	import Button from '$lib/components/Button.svelte';
-	export let name: string;
-	export let onChoose: (name: string) => void;
+  import Button from "$lib/components/Button.svelte";
+  export let name: string;
+  export let onChoose: (name: string) => void;
 </script>
 
-<Button on:click={() => onChoose(name)} class="w-full text-4xl {$$restProps.class}">{name}</Button>
+<Button
+  on:click={() => onChoose(name)}
+  class="w-full text-4xl {$$restProps.class}">{name}</Button
+>

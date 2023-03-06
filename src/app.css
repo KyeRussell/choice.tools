@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-	.pb-safe {
-		padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
-	}
+  .pb-safe {
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
 }

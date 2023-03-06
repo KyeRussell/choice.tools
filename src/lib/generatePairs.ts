@@ -5,16 +5,16 @@
  * @returns An array of pairs, where each pair is an array of two items from the input `items` array.
  */
 export default function generatePairs<T>(items: Array<T>): Array<[T, T]> {
-	// Remove duplicates.
-	items = [...new Set(items)];
+  // Remove duplicates.
+  items = [...new Set(items)];
 
-	// Check if the array has at least two items.
-	if (items.length < 2) {
-		throw 'The array must have at least two items.';
-	}
+  // Check if the array has at least two items.
+  if (items.length < 2) {
+    throw "The array must have at least two items.";
+  }
 
-	return items.reduce((pairs, item1, i) => {
-		items.slice(i + 1).forEach((item2) => pairs.push([item1, item2]));
-		return pairs;
-	}, [] as Array<[T, T]>);
+  return items.reduce((pairs, item1, i) => {
+    items.slice(i + 1).forEach((item2) => pairs.push([item1, item2]));
+    return pairs;
+  }, [] as Array<[T, T]>);
 }
