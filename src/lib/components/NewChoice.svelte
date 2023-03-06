@@ -27,7 +27,7 @@
 <ListItem>
 	<form on:submit|preventDefault={onSubmit} class="flex w-full items-center gap-2">
 		<input
-			class="m-0 h-14 w-full border-0 bg-inherit p-0 text-2xl focus:ring-0"
+			class="m-0 h-14 w-full border-0 bg-inherit p-0 text-2xl focus:ring-0 dark:placeholder:text-neutral-500"
 			type="text"
 			bind:value={currentChoice}
 			placeholder={!othersInList ? 'Type here...' : 'And another...'}

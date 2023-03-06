@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ChoiceInput from '$lib/components/ChoiceInput.svelte';
+	import NewChoice from '$lib/components/NewChoice.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import IntroText from '$lib/components/IntroText.svelte';
 	import List from '$lib/components/List.svelte';
@@ -38,7 +38,7 @@
 			</ListItem>
 		{/each}
 		<!-- Input for new choice -->
-		<ChoiceInput {onAddChoice} {choices} />
+		<NewChoice {onAddChoice} {choices} />
 	</List>
 
 	<!-- Finished! -->
